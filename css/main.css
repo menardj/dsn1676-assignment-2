@@ -24,6 +24,7 @@ background-image: url(../images/clock-face.svg);
 background-repeat: no-repeat;
 width: 300px;
 height: 300px;
+transition: all 6s linear;
 }
 
 .hand {
@@ -31,12 +32,14 @@ position: absolute;
 }
 
 .hand-hour {
+transform-origin: center bottom;
 width: 14px;
 left: calc(50% - 7px);
 bottom: 50%;
 }
 
 .hand-minute {
+transform-origin: center bottom;
 width: 14px;
 left: calc(50% - 7px);
 bottom: 50%;
@@ -47,4 +50,14 @@ position: absolute;
 width: 28px;
 top: calc(50% - 14px);
 left: calc(50% - 14px);
+}
+
+.clock-face:hover .hand-hour {
+transform: rotate(360deg);
+transition: all 6s linear;
+}
+
+.clock-face:hover .hand-minute {
+transform: rotate(4320deg);
+transition: all 6s linear;
 }
