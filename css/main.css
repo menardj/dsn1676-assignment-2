@@ -18,7 +18,42 @@ html {
 	box-sizing: inherit;
 }
 
+.main {
+	text-align: center;
+}
+
+.btn {
+	margin: 25px;
+	font-family: arial, sans-serif;
+	text-decoration: none;
+	color: black;
+	transition: all 250ms linear;
+}
+
+.btn:hover {
+	background-color: white;
+}
+
+.btn-forwards {
+text-align: center;
+display: inline-block;
+background-color: green;
+border-radius: 50%;
+width: 6em;
+line-height: 6em;
+}
+
+.btn-backwards {
+text-align: center;
+display: inline-block;
+background-color: red;
+border-radius: 50%;
+width: 6em;
+line-height: 6em;
+}
+
 .clock-face {
+margin: 0 auto;
 position: relative;
 background-image: url(../images/clock-face.svg);
 background-repeat: no-repeat;
@@ -36,6 +71,7 @@ transform-origin: center bottom;
 width: 14px;
 left: calc(50% - 7px);
 bottom: 50%;
+transition: all 6s linear;
 }
 
 .hand-minute {
@@ -43,6 +79,7 @@ transform-origin: center bottom;
 width: 14px;
 left: calc(50% - 7px);
 bottom: 50%;
+transition: all 6s linear;
 }
 
 .center {
@@ -52,12 +89,10 @@ top: calc(50% - 14px);
 left: calc(50% - 14px);
 }
 
-.clock-face:hover .hand-hour {
+.clock-face:target .hand-hour {
 transform: rotate(360deg);
-transition: all 6s linear;
 }
 
-.clock-face:hover .hand-minute {
+.clock-face:target .hand-minute {
 transform: rotate(4320deg);
-transition: all 6s linear;
 }
